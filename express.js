@@ -29,7 +29,7 @@ app.use(function (req, res, next) {
    }
 });
 
-
+console.log(123)
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static('./public'));
