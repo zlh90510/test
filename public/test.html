@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: scroll;
+        }
+        table th, table td{
+            border:  1px solid #cccccc;
+        }
+        table{
+            border: 1px solid #cccccc;
+        }
+        .pop-up-wrap{
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            top:0;
+            bottom: 0;
+            left:0;
+            right:0;
+            background: #00000047;
+            position: absolute;
+            display: none;
+        }
+        .pop-up-wrap .pop-up{
+            height: 200px;
+            position: relative;
+            width: 400px;
+            text-align: center;
+            background: white;
+            margin: auto;
+            margin-top: 200px;
+        }
+        .pop-up-wrap .pop-up .form-wrap{
+            padding: 60px;
+        }
+    </style>
+</head>
+<body>
+<div id='root'></div>
+<h1>My Playground</h1>
+
+<div>
+    <h3>ButtonTest</h3>
+    <button id="button1" >POST</button>
+    <button id="button2" >GET</button>
+</div>
+<br>
+
+<div style="width: 100%;">
+    <h3>Login Form</h3>
+    <form class="main">
+        user: <input id="user" type="text" name="user" value="1" /><br />
+        password: <input id="password" type="password" name="password" value="2" /><br />
+    </form>
+    <button id="createNew">Create New User</button>
+    <button id="login">Login</button>
+    <br>
+    <Table width="500">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>User Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </Table>
+    <div class="pop-up-wrap">
+        <div class="pop-up">
+            <div class="form-wrap">
+                <form class="subform">
+                    user: <input id="c_user" disabled="disabled" type="text" name="c_user" value="" /><br />
+                    old password: <input id="c_pw" disabled="disabled" name="old_password" value="" /><br />
+                    New password: <input id="n_pw" type="text" name="new_password" value="" /><br />
+                    <button id="change">change</button>
+                    <button id="cancel">cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+</html>
